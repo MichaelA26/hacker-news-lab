@@ -14,9 +14,7 @@ class NewsContainer extends Component {
   componentDidMount() {
     fetch('https://hacker-news.firebaseio.com/v0/topstories.json')
     .then(res => res.json())
-    // .then(data => slughorn = data
-
-
+    .then(data => this.setState({ stories: data}))
   }
 
   render() {
