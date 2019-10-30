@@ -14,6 +14,7 @@ class NewsContainer extends Component {
     return (
       <div className='news-container'>
       <h1>A dark code question for Slughorn</h1>
+      <h2>Damn it Graham you can't ask that!!!</h2>
       </div>
     )
   }
