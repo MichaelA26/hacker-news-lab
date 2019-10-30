@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import NewsList from '../components/NewsList';
 
 class NewsContainer extends Component {
   constructor(props) {
@@ -10,11 +11,19 @@ class NewsContainer extends Component {
 
   }
 
+  componentDidMount() {
+    fetch('https://hacker-news.firebaseio.com/v0/topstories.json')
+    .then(res => res.json())
+    // .then(data => slughorn = data
+
+
+  }
+
   render() {
     return (
       <div className='news-container'>
       <h1>A dark code question for Slughorn</h1>
-      <h2>Damn it Graham you can't ask that!!!</h2>
+      <NewsList stories={this.state.stories}/>
       </div>
     )
   }
@@ -22,8 +31,3 @@ class NewsContainer extends Component {
 }
 
 export default NewsContainer;
-
-
-// fetch('https://hacker-news.firebaseio.com/v0/topstories.json')
-// .then(res => res.json())
-// .then(data => yo = data)
